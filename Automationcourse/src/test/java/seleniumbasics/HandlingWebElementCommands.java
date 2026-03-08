@@ -9,8 +9,10 @@ public class HandlingWebElementCommands extends Base{
 		WebElement msgbox = driver.findElement(By.id("single-input-field"));
 		msgbox.sendKeys("Test message");
 		//WebElement button = driver.findElement(By.xpath("//button[Text() = 'Show Message']"));
-		WebElement button = driver.findElement(By.id("button-one"));
-		button.click();
+		WebElement showmsgbutton = driver.findElement(By.id("button-one"));
+		System.out.println(showmsgbutton.isDisplayed());
+		System.out.println(showmsgbutton.isEnabled());
+		showmsgbutton.click();
 		WebElement yourmsg = driver.findElement(By.id("message-one"));
 		System.out.println(yourmsg.getText());
 		msgbox.clear();
